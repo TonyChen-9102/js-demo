@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>·
+	</head>
+	<body>
+		<div id="app">
+			<div class="button" @click="click">{{msg}}</div>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: "#app",
+				data: {
+					msg: "hello",
+					num:1
+				},
+				methods: {
+					click() {
+						this.num++;
+						this.msg = bsoftJsInterface.setAndroid("fasong="+this.num);
+					},
+					seth5(msg) {
+						console.log("seth5="+msg)
+						return "seth5 return"
+					}
+				},
+				mounted:function(){
+					window.seth5 = this.seth5;
+				}
+			});
+		</script>
+
+		<style>
+			.button {
+				width: 100px;
+				height: 100px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: aliceblue;
+				font-size: 30px;
+			}
+		</style>
+	</body>
+</html>
